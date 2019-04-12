@@ -1,0 +1,11 @@
+version: '3'
+services:
+
+  glusterfs:
+    image: glusterfs:latest
+    ports:
+      - "2222:22"
+    environment:
+      SSH_PASS: guest
+
+
