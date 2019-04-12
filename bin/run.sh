@@ -7,7 +7,7 @@ set -e
 INSTANCE_NAME="${INSTANCE_NAME:glusterfs.marathon.mesos}" 
 
 
-
+mkdir -p $GLUSTER_PATH/$GLUSTER_VOL
 WAIT=$(( ( RANDOM % 10 )  + 5 ))
 echo "Wait $WAIT seconds before start"
 sleep $WAIT

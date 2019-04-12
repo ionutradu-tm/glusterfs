@@ -8,6 +8,10 @@ RUN add-apt-repository ppa:gluster/glusterfs-4.1
 RUN apt-get update && \
     apt-get install  -y glusterfs-server openssh-server dnsutils
 
+RUN apt-get clean autoclean && \
+    apt-get autoremove --yes && \
+    rm -rf /var/lib/{apt,dpkg,cache,log}/
+
 
 # SSH 
 ENV SSH_USER root
