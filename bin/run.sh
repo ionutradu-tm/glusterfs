@@ -4,7 +4,7 @@ set -e
 
 [ "$DEBUG" == "1" ] && set -x && set -e
 
-INSTANCE_NAME="${INSTANCE_NAME:glusterfs.marathon.mesos}" 
+INSTANCE_NAME=${INSTANCE_NAME:glusterfs.marathon.mesos}
 
 
 mkdir -p $GLUSTER_PATH/$GLUSTER_VOL
